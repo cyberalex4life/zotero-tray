@@ -14,4 +14,7 @@ In `zotero.desktop` (wherever that is: `/usr/share/applications/`; `/usr/local/s
 
 Be sure that `Iconify when minimized` is checked in the options of the tray icon, so that you can also hide zotero running this script, or using the modified launcher.
 
+### Tested on 
+- Linux Mint 18.3 Cinnamon 64-bit - for now
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
