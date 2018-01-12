@@ -17,4 +17,7 @@ Be sure that `Iconify when minimized` is checked in the options of the tray icon
 ### Tested on 
 - Linux Mint 18.3 Cinnamon 64-bit - for now
 
+### Check out
+- [thunderbird-tray](https://github.com/cyberalex4life/thunderbird-tray)
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
