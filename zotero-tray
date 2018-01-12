@@ -1,12 +1,16 @@
 #! /bin/bash
-if [ -z "$(WINDOW_ID=$(xdotool search --onlyvisible --class zotero); echo $WINDOW_ID)" ] && [ -z "$(pidof kdocker)" ]; then
-    zotero &
-    WINDOW_ID=$(printf 0x%x $(xdotool search --onlyvisible --sync  --class zotero)) # WINDOW_ID in hex
+CLASS=zotero
+PROGRAM=zotero
+MAIN_EXEC=zotero-bin
+if [ -z "$(WINDOW_ID=$(xdotool search --onlyvisible --class $CLASS); echo $WINDOW_ID)" ] && [ -z "$(pidof $MAIN_EXEC)" ]; then
+    $PROGRAM &
+    WINDOW_ID=$(printf 0x%x $(xdotool search --onlyvisible --sync  --class $CLASS)) # WINDOW_ID in hex
     kdocker -w $WINDOW_ID -q &
 else
-    if [ -z "$(WINDOW_ID=$(xdotool search --onlyvisible --class zotero); echo $WINDOW_ID)" ]; then 
-        zotero &
+    WINDOW_ID=$(xdotool search --onlyvisible --class $CLASS)
+    if [ -z "$WINDOW_ID" ]; then 
+        $PROGRAM &
     else 
-        xdotool search --onlyvisible --sync --class zotero windowminimize
+        xdotool windowminimize --sync  $WINDOW_ID
     fi    
 fi
