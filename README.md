@@ -12,6 +12,6 @@ Please place this script in a location form PATH environment variable and make i
 
 In `zotero.desktop` (wherever that is: `/usr/share/applications/`; `/usr/local/share/applications/`; `~/.local/share/applications/`) change `Exec=zotero` line to `Exec=zotero-tray`.
 
-Be sure that `Iconify when minimized` is checked in the options of the tray icon, such that you can also hide zotero running this script, or using the modified launcher.
+Be sure that `Iconify when minimized` is checked in the options of the tray icon, so that you can also hide zotero running this script, or using the modified launcher.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
